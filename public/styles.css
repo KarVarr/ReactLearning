@@ -1,0 +1,11 @@
+.heading {
+  color: red;
+}
+
+.divImg {
+  width: 100px;
+  height: 100px;
+}
+.divImg > img {
+  max-width: 100%;
+}
