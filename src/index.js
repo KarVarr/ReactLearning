@@ -2,27 +2,39 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "../public/styles.css";
 
-const name = `Karen`;
-const data = new Date().getFullYear();
+const date = new Date().getHours();
+
+const color = {
+  color: ""
+};
+
+let greering;
+
+if (date < 12) {
+  greering = "Good morning";
+  color.color = "red";
+} else if (date < 18) {
+  greering = " Good adternoon";
+  color.color = "green";
+} else {
+  greering = "Good Evening";
+  color.color = "blue";
+}
+
 ReactDOM.render(
   <>
-    <h1 className="heading">Created by {name}</h1>
-    <h2 spellCheck="false">Copyright {data}</h2>
-
-    <div className="divImg">
-      <img
-        alt="food"
-        src="https://www.myfoodtrip.com/wp-content/uploads/2020/05/Food-Blog-Directory.jpg"
-      />
-      <img
-        alt="food"
-        src="https://media.self.com/photos/622912847b959736301bfb91/2:1/w_2119,h_1059,c_limit/GettyImages-1301412050.jpg"
-      />
-      <img
-        alt="food"
-        src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/processed-food700-350-e6d0f0f.jpg?quality=90&resize=768,574"
-      />
-    </div>
+    <h1 className="heading" style={color}>
+      {greering}
+    </h1>
   </>,
   document.getElementById("root")
 );
+
+// {
+//   date > 0 && date < 12 ? 'Good mornig' : date > 12 && date < 18 ? 'Good afternoon' : date > 18 && date < 23 ? 'Good eveninng' : ''
+// }
+// let studentGrade = studentScore >= 70 ? "A"
+//     : studentScore >= 60 ? "B"
+//     : studentScore >= 50 ? "C"
+//     : studentScore >= 45 ? "D"
+//     : "E";

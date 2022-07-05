@@ -1,11 +1,5 @@
 .heading {
-  color: red;
-}
-
-.divImg {
-  width: 100px;
-  height: 100px;
-}
-.divImg > img {
-  max-width: 100%;
+  font-size: 50px;
+  font-weight: bold;
+  border-bottom: 5px solid #000;
 }
